@@ -10,12 +10,17 @@
  // Add the IDs of extensions you want installed when the container is created.
  "customizations": {
      "vscode": {
-         "extensions": ["GitHub.copilot"]
+         "extensions": [
+           "GitHub.copilot",
+           "ms-toolsai.jupyter",
+           "ms-python.python"
+         ]
      },
      "codespaces": {
          "openFiles": ["codespace.md"]
      }
  },
 
- "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
+ "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md",
+ "updateContentCommand": "python3 -m pip install -r requirements.txt",
 }
