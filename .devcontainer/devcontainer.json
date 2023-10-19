@@ -21,6 +21,8 @@
      }
  },
 
- "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md",
- "updateContentCommand": "python3 -m pip install -r requirements.txt",
+ "postCreateCommand": [
+   "echo '# Writing code upon codespace creation!'  >> codespace.md",
+   "python3 -m pip install -r requirements.txt"
+ ]
 }
